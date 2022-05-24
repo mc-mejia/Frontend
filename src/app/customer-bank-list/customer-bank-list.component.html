@@ -1,0 +1,58 @@
+<app-panel-box>
+    <span>customer Bank List</span>
+    <div panel-body>
+        <!-- <input type="text" placeholder="Filter products" class="form-control" [(ngModel)]="filterProducts"/> -->
+        <!-- <div class="alert alert-success" *ngIf="filterProducts">
+          Filter by:  {{filterProducts}}
+        </div> -->
+        <table class="table table-bordered" *ngIf="products && products.length">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <!-- <th>
+                        <button class="btn btn-primary" (click)="toggleImage()">
+                            {{showHideImg ? "Hide image" : "Show Image"}}
+                           </button>
+                    </th> -->
+                  
+                    <th>Account Id</th> 
+                   <th>Customer Account</th> 
+                   <th>Balance </th>
+                   <th>Transaction</th>
+                   <th>Approve</th>
+                   <th>Date of Approval </th>
+                   <th>Bank Account Type</th>
+               </tr>
+            </thead>
+            <tbody>
+
+            
+        
+        <tr *ngFor="let customerBankList of customerBankLists">
+            <td> 
+                    {{customerBankLists.accountId}}
+       </td>
+            <!-- <td><img [src]="product.imageUrl" style="width:50px;" *ngIf="showHideImg"/></td> -->
+            <!-- <td>
+                <a [routerLink]="['/product',product.productCode]">
+                       {{product.productName}}
+                </a>
+            </td> -->
+            <td>{{customerBankLists.customerAccount}}</td>
+            <td>{{customerBankLists.balance}}</td>
+            <td>{{customerBankLists.transaction}}</td>
+            <td>{{customerBankLists.approve}}</td>
+            <td>{{customerBankLists.dataofApproval}}</td>
+            <td>{{customerBankLists.bankAccountType}}</td>
+            <!-- <td>
+           <app-rating [rating]="product.starRating" (ratingEvent)="receiveDataFromParent($event)"></app-rating>
+               </td> -->
+          
+        </tr>
+       </tbody>
+    </table>
+
+    </div>
+</app-panel-box>
+
+

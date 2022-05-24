@@ -21,6 +21,8 @@ import {AuthService} from './auth/auth.service';
 import { NavbarComponent } from './misc/navbar/navbar.component';
 import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
+import { CustomerBankListComponent } from './customer-bank-list/customer-bank-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,9 @@ import { ReactiveComponent } from './validation/reactive/reactive.component';
     WelcomeComponent,
     NavbarComponent,
     TemplateComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    CustomerBankListComponent,
+    
   ],
   imports: [
     BrowserModule,

@@ -18,6 +18,7 @@
           <li><a [routerLink]="['product']" *ngIf="userStatus">Products</a></li>
           <li><a [routerLink]="['template-form']" *ngIf="userStatus">Template Form</a></li>
           <li><a [routerLink]="['reactive-form']" *ngIf="userStatus">Reactive Form</a></li>
+          <li><a [routerLink]="['customer-bank-list']" *ngIf="userStatus"> Show customer data</a></li>
           <li><a [routerLink]="['login']" *ngIf="!userStatus">Login</a></li>
         </ul>
         
