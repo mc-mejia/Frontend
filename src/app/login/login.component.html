@@ -1,0 +1,28 @@
+<h1 style="color: red;">login works!</h1>
+<hr/>
+<!--div> Months :
+    <select>
+       <option *ngFor = "let i of months">{{i}}</option>
+    </select>
+ </div>
+ <br/
+ <div>
+    <span *ngIf = "isavailable; then condition1 else condition2">
+       Condition is valid.
+    </span>
+    <ng-template #condition1>Condition is valid</ng-template>
+    <ng-template #condition2>Condition is invalid</ng-template>
+ </div>-->
+ <h3>Event Binding</h3>
+ <button (click) = "myClickFunction('irfan')">
+    Click Me
+ </button>
+ <hr/>
+  <h3>Custome property binding</h3>
+<fa-propertyBinding [result]="2000"></fa-propertyBinding>
+<hr/>
+<h3 style="color:blue">Binding Data to Custom Events</h3>
+<fa-event-binding (clickable)="onClickedIrfan('Irfan')"></fa-event-binding>
+
+
+

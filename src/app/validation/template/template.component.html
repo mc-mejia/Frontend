@@ -1,0 +1,51 @@
+<app-panel-box>
+    <span panel-title>Template driven form</span>
+    <div panel-body>
+        <form #userForm="ngForm" (ngSubmit)="saveUser(userForm.value,userForm.valid)">
+            <div class="form-group">
+                <label class="control-label">First Name</label>
+                <input type="text" class="form-control" [(ngModel)]="userForm.firstname" name="firstname"
+                    placeholder="FirstName" required minlength="5" #firstnameVar="ngModel" />
+                <div *ngIf="!firstnameVar.valid && firstnameVar.touched">
+                    <div class="alert alert-danger" *ngIf="firstnameVar.errors.required">Please Enter first name</div>
+                    <div class="alert alert-danger" *ngIf="firstnameVar.errors.minlength">Please Enter valid firstname
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Last Name</label>
+                <input type="text" class="form-control" [(ngModel)]="userForm.lastname" name="lastname"
+                    placeholder="Last Name" required minlength="5" #lastnameVar="ngModel" />
+                <div *ngIf="!lastnameVar.valid && lastnameVar.touched">
+                    <div class="alert alert-danger" *ngIf="lastnameVar.errors.required">Please Enter last name</div>
+                    <div class="alert alert-danger" *ngIf="lastnameVar.errors.minlength">Please Enter valid lastname
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">EMail</label>
+                <input type="text" class="form-control" [(ngModel)]="userForm.email" name="email" placeholder="EMail"
+                    required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #emailVar="ngModel" />
+                <div *ngIf="!emailVar.valid && emailVar.touched">
+                    <div class="alert alert-danger" *ngIf="emailVar.errors.required">Please Enter email </div>
+                    <div class="alert alert-danger" *ngIf="emailVar.errors.pattern">Please Enter valid email </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">
+                    <input type="radio" required [(ngModel)]="userForm.gender" name="gender" value="male"
+                        #genderVar="ngModel" />Male
+                </label>
+                <label class="control-label">
+                    <input type="radio" required [(ngModel)]="userForm.gender" name="gender" value="female"
+                        #genderVar="ngModel" />FeMale
+                </label>
+                <div *ngIf="!genderVar.valid && genderVar.touched">
+                    <div class="alert alert-danger" *ngIf="genderVar.errors.required">Please select Genger</div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit" [disabled]="!userForm.valid">Save</button>
+        </form>
+
+    </div>
+</app-panel-box>
