@@ -5,7 +5,7 @@
         <!-- <div class="alert alert-success" *ngIf="filterProducts">
           Filter by:  {{filterProducts}}
         </div> -->
-        <table class="table table-bordered" *ngIf="products && products.length">
+        <table class="table table-bordered" *ngIf="customerBankLists && customerBankLists.length">
             <thead>
                 <tr>
                     <th>#</th>
@@ -15,7 +15,7 @@
                            </button>
                     </th> -->
                   
-                    <th>Account Id</th> 
+                   <th>Account Id</th> 
                    <th>Customer Account</th> 
                    <th>Balance </th>
                    <th>Transaction</th>
@@ -30,7 +30,7 @@
         
         <tr *ngFor="let customerBankList of customerBankLists">
             <td> 
-                    {{customerBankLists.accountId}}
+                    {{customerBankList.accountId}}
        </td>
             <!-- <td><img [src]="product.imageUrl" style="width:50px;" *ngIf="showHideImg"/></td> -->
             <!-- <td>
@@ -38,12 +38,12 @@
                        {{product.productName}}
                 </a>
             </td> -->
-            <td>{{customerBankLists.customerAccount}}</td>
-            <td>{{customerBankLists.balance}}</td>
-            <td>{{customerBankLists.transaction}}</td>
-            <td>{{customerBankLists.approve}}</td>
-            <td>{{customerBankLists.dataofApproval}}</td>
-            <td>{{customerBankLists.bankAccountType}}</td>
+            <td>{{customerBankList.customerAccount}}</td>
+            <td>{{customerBankList.balance}}</td>
+            <td>{{customerBankList.transaction}}</td>
+            <td>{{customerBankList.approve}}</td>
+            <td>{{customerBankList.dataofApproval}}</td>
+            <td>{{customerBankList.bankAccountType}}</td>
             <!-- <td>
            <app-rating [rating]="product.starRating" (ratingEvent)="receiveDataFromParent($event)"></app-rating>
                </td> -->

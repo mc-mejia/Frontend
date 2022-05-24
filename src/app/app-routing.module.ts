@@ -18,13 +18,17 @@ const routes: Routes = [
   { path:'template-form', component:TemplateComponent,canActivate:[AuthGuard] },
   { path:'reactive-form', component:ReactiveComponent,canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
+  {path:'customer-bank-list',component:CustomerBankListComponent,canActivate:[AuthGuard]},
   
  //{ path: '', component: IndexComponent ,pathMatch:"full"},
  { path: 'welcome', component: WelcomeComponent ,canActivate:[AuthGuard]},
   //{ path: 'register', component: RegisterComponent },
- {path:"**",redirectTo:"product" },
-  {path:'', redirectTo:"product" ,pathMatch:"full"},  
-  {path:'customer/:customerId/account',component: CustomerBankListComponent}
+//  {path:"**",redirectTo:"product" },
+//   {path:'', redirectTo:"product" ,pathMatch:"full"},  
+  
+  // {path:"**",redirectTo:'customer-bank-list'},
+  // {path:'', redirectTo:'customer-bank-list',pathMatch:"full"},
+  // {path:'',redirectTo:'customer/:customerId/account'},
 ];
 
 @NgModule({

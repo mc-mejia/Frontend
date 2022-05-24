@@ -10,6 +10,6 @@ export class CustomerBankListService {
   constructor(private _http: HttpClient) { }
 
   getAllCustomerBank(){
-    return this._http.get("http://localhost:8080/api/staff/accounts/approve");
+    return this._http.get("http://localhost:8080/api/customer/1/account");
   }
 }
