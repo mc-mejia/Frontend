@@ -11,14 +11,14 @@ import { CustomerBeneficiaryService } from '../customer-beneficiary/customer-ben
 })
 export class CustomerBeneficiaryListComponent implements OnInit {
 
-  beneficiaries : any;
+  beneficiaries : CustomerBeneficiary[];
   dataSubscription : any;
   customerId : any;
   constructor(private beneficiaryService : CustomerBeneficiaryService,private router: Router) { }
 
   ngOnInit() {
-    this.reloadData(6);
-    this.customerId = 6;
+    this.reloadData(1);
+    this.customerId = 1;
   }
   reloadData(customerId: number) {
     this.dataSubscription = this.beneficiaryService.getCustomerBeneficiaries(customerId).subscribe((data) => {

@@ -25,6 +25,7 @@ import { StaffComponent } from './staff/staff.component';
 import { MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateStaffComponent } from './create-staff/create-staff.component';
+import { CustomerBeneficiaryListComponent } from './customer-beneficiary-list/customer-beneficiary-list.component';
 
 
 @NgModule({
@@ -47,6 +48,8 @@ import { CreateStaffComponent } from './create-staff/create-staff.component';
 
     StaffComponent,
     CreateStaffComponent,
+
+    CustomerBeneficiaryListComponent
 
 
   ],

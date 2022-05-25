@@ -16,7 +16,7 @@
             </thead>
             <tbody>
                 <tr *ngFor="let beneficiary of beneficiaries">
-                    <td>{{beneficiary.accountNo}}</td>
+                    <td>{{beneficiary.beneficiaryId}}</td>
                     <td>{{beneficiary.customerAccount.customerName}}</td>
                     <td><button (click)="deleteBeneficiary(customerId, beneficiary.beneficiaryId)" class="btn btn-danger">Delete</button>
                     </td>
