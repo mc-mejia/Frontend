@@ -4,7 +4,6 @@ import { StaffService } from './staff.service';
 @Component({
   selector: 'app-staff',
   templateUrl: './staff.component.html',
-  styleUrls: ['./staff.component.styl']
 })
 export class StaffComponent implements OnInit {
 
