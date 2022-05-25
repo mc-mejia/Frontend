@@ -12,6 +12,7 @@ import { StaffAccountStatementComponent } from './staff-account-statement/staff-
 
 import { StaffComponent } from './staff/staff.component';
 import { CreateStaffComponent } from './create-staff/create-staff.component';
+import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff.component';
 const routes: Routes = [
   // { path:'product', component: ProductComponent,canActivate:[AuthGuard] },
   // { path:'product/:pId', component:DetailsComponent,canActivate:[AuthGuard] },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {path:'customer-bank-list',component:CustomerBankListComponent,canActivate:[AuthGuard]},
   {path:'staff/transfer',component:StaffAccountStatementComponent},
+  {path:'staff/beneficiary',component:BeneficiaryStaffComponent},
   
  //{ path: '', component: IndexComponent ,pathMatch:"full"},
  { path: 'welcome', component: WelcomeComponent ,canActivate:[AuthGuard]},
