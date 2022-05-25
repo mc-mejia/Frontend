@@ -22,6 +22,8 @@ import { NavbarComponent } from './misc/navbar/navbar.component';
 import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
 import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff.component';
+import { CustomerBankListComponent } from './customer-bank-list/customer-bank-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,8 @@ import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff
     NavbarComponent,
     TemplateComponent,
     ReactiveComponent,
-    BeneficiaryStaffComponent
+    BeneficiaryStaffComponent,
+    CustomerBankListComponent
   ],
   imports: [
     BrowserModule,
