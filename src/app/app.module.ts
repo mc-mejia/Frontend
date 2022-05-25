@@ -21,6 +21,7 @@ import {AuthService} from './auth/auth.service';
 import { NavbarComponent } from './misc/navbar/navbar.component';
 import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
+import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { ReactiveComponent } from './validation/reactive/reactive.component';
     WelcomeComponent,
     NavbarComponent,
     TemplateComponent,
-    ReactiveComponent
+    ReactiveComponent,
+    BeneficiaryStaffComponent
   ],
   imports: [
     BrowserModule,
