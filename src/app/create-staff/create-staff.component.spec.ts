@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BeneficiaryStaffComponent } from './beneficiary-staff.component';
+import { CreateStaffComponent } from './create-staff.component';
 
-describe('BeneficiaryStaffComponent', () => {
-  let component: BeneficiaryStaffComponent;
-  let fixture: ComponentFixture<BeneficiaryStaffComponent>;
+describe('CreateStaffComponent', () => {
+  let component: CreateStaffComponent;
+  let fixture: ComponentFixture<CreateStaffComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BeneficiaryStaffComponent ]
+      declarations: [ CreateStaffComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(BeneficiaryStaffComponent);
+    fixture = TestBed.createComponent(CreateStaffComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -22,6 +22,4 @@ describe('BeneficiaryStaffComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-
 });

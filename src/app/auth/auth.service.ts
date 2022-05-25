@@ -8,13 +8,15 @@ import {Subject,BehaviorSubject} from 'rxjs';
 export class AuthService {
   //$auth= new Subject();//here $ means its holding object of observable(that is naming convencan)
    $auth=new BehaviorSubject(this.checkLogin());
+  userName: any;
+  password: any;
   constructor(private _router:Router) { }
   checkLogin(){
     //return true;
     return localStorage.getItem("isLoggedIn");
   }
   login(credentials){
-   if(credentials.username=="admin" && credentials.password=="admin"){
+   if(credentials.username== "admin" && credentials.password=="admin"){
     localStorage.setItem("isLoggedIn","true");
     this.$auth.next(this.checkLogin());
       this._router.navigate(['/welcome']);

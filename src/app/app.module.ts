@@ -21,9 +21,16 @@ import {AuthService} from './auth/auth.service';
 import { NavbarComponent } from './misc/navbar/navbar.component';
 import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
+
 import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff.component';
 import { CustomerBankListComponent } from './customer-bank-list/customer-bank-list.component';
 import { StaffAccountStatementComponent } from './staff-account-statement/staff-account-statement.component';
+
+import { StaffComponent } from './staff/staff.component';
+import { MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateStaffComponent } from './create-staff/create-staff.component';
+
 
 @NgModule({
   declarations: [
@@ -43,16 +50,24 @@ import { StaffAccountStatementComponent } from './staff-account-statement/staff-
     NavbarComponent,
     TemplateComponent,
     ReactiveComponent,
+
     BeneficiaryStaffComponent,
     CustomerBankListComponent,
-    StaffAccountStatementComponent
+    StaffAccountStatementComponent,
+
+    StaffComponent,
+    CreateStaffComponent,
+
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSlideToggleModule,
+    BrowserAnimationsModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

@@ -1,0 +1,50 @@
+<app-panel-box>
+    <span panel-title>Staff</span>
+    <div panel-body>
+        <table class="table table-bordered" *ngIf="staff && staff.length">
+            <thead>
+                <tr>
+                 <!--  <th>Staff accountNumber</th> 
+                   <th>Staff accountType</th>
+                   <th>Staff status</th>
+                   <th>Staff doc</th> -->
+                   <th>Staff name</th>
+                   <th>Staff userName</th> 
+                  <!-- <th>Staff password</th>
+                   <th>Staff name</th> -->
+                  <th> Enable Disable</th>
+               </tr>
+            </thead>
+            <tbody>
+
+            
+        
+        <tr *ngFor="let staff of staff">
+          <!-- <td>{{staff.accountNumber}}</td>
+            <td>{{staff.accountType}}</td>
+            <td>{{staff.status}}</td>
+            <td>{{staff.doc}}</td>-->
+            <td>
+                <!--  <a [routerLink]="['/staff',staff.staffName]"> -->
+                         {{staff.staffName}}
+                  <!--</a>-->
+                 </td>
+            <td>{{staff.userName}}</td>
+            <!--<td>{{staff.password}}</td>
+             <td>
+                <a [routerLink]="['/staff',staff.staffName]"> 
+                         {{staff.staffName}}
+                  </a>
+                 </td>-->
+                 <td>
+                    <mat-slide-toggle
+                    (change)="onChange($event)">
+                 </mat-slide-toggle>
+                   
+                 </td>
+          
+        </tr>
+       </tbody>
+    </table>
+</div>
+</app-panel-box>

@@ -13,10 +13,16 @@ import { ReactiveComponent } from './validation/reactive/reactive.component';
 import { CustomerBankListComponent } from './customer-bank-list/customer-bank-list.component';
 import { StaffAccountStatementComponent } from './staff-account-statement/staff-account-statement.component';
 
+import { StaffComponent } from './staff/staff.component';
+import { CreateStaffComponent } from './create-staff/create-staff.component';
 const routes: Routes = [
   { path:'product', component: ProductComponent,canActivate:[AuthGuard] },
   { path:'product/:pId', component:DetailsComponent,canActivate:[AuthGuard] },
   { path:'template-form', component:TemplateComponent,canActivate:[AuthGuard] },
+
+  { path:'staff', component:StaffComponent,canActivate:[AuthGuard] },
+  { path:'create-staff', component: CreateStaffComponent,canActivate:[AuthGuard] },
+
   { path:'reactive-form', component:ReactiveComponent,canActivate:[AuthGuard] },
   { path: 'login', component: LoginComponent },
   {path:'customer-bank-list',component:CustomerBankListComponent,canActivate:[AuthGuard]},
