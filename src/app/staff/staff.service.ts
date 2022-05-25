@@ -5,14 +5,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class StaffService {
-    [x: string]: any;
+
+    staff: any[];
   
     constructor(private _http: HttpClient) { }
     getStaff(){
-    /*this._http.get("http://localhost:3000/getproducts").subscribe((data)=>{
-     console.log(data);
-     return data;
-    }); */
      return  this._http.get("http://localhost:8080/api/admin/staff");
       /*  return [
         {
