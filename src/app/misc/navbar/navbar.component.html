@@ -18,7 +18,9 @@
           <li><a [routerLink]="['product']" *ngIf="userStatus">Products</a></li>
           <li><a [routerLink]="['template-form']" *ngIf="userStatus">Template Form</a></li>
           <li><a [routerLink]="['reactive-form']" *ngIf="userStatus">Reactive Form</a></li>
+          <li><a [routerLink]="['app-customer-beneficiary-list']" *ngIf="userStatus" >Beneficiaries</a></li>
           <li><a [routerLink]="['login']" *ngIf="!userStatus">Login</a></li>
+          <li><a [routerLink]="['app-create-customer-beneficiary']" *ngIf="userStatus">Add Beneficiary</a></li>
         </ul>
         
         <ul class="nav navbar-nav navbar-right">

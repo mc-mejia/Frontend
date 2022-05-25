@@ -1,5 +1,5 @@
 import { CustomerBeneficiaryService } from './customer-beneficiary.service';
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -13,18 +13,15 @@ export class CustomerBeneficiaryComponent implements OnInit,OnDestroy {
   beneficiaries:any=[]
   //  showHideImg: boolean=true;
   //  dataSubscription: any;
-   customerID: number;
 
 
   constructor( private _beneficiaryService: CustomerBeneficiaryService, private _activatedRoute: ActivatedRoute,private _router:Router) {
     
   }
 
-
   ngOnInit(){
-    this.customerID=this._activatedRoute.snapshot.params['customerId'];
 
-    this._beneficiaryService.getCustomerBeneficiaries(this.customerID).subscribe(data => {
+    this._beneficiaryService.getCustomerBeneficiaries(this._activatedRoute.snapshot.params['customerId']).subscribe(data => {
       console.log(data)
       this.beneficiaries=data;
     },error =>console.log(error));

@@ -7,7 +7,7 @@ import  {RegisterComponent} from './register/register.component';
 import { IndexComponent } from './index/index.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import  {OtherComponent} from './login/other.component'
+import  {OtherComponent} from './login/other.component';
 import {PropertyBindingComponent} from './login/property-binding.component';
 import {EventBindingComponent} from './login/event-binding.component';
 import { ProductComponent } from './product/product.component';
@@ -22,6 +22,8 @@ import { NavbarComponent } from './misc/navbar/navbar.component';
 import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
 import { CustomerBeneficiaryComponent } from './customer-beneficiary/customer-beneficiary.component';
+import { CreateCustomerBeneficiaryComponent } from './create-customer-beneficiary/create-customer-beneficiary.component';
+import { CustomerBeneficiaryListComponent } from './customer-beneficiary-list/customer-beneficiary-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { CustomerBeneficiaryComponent } from './customer-beneficiary/customer-be
     NavbarComponent,
     TemplateComponent,
     ReactiveComponent,
-    CustomerBeneficiaryComponent
+    CustomerBeneficiaryComponent,
+    CreateCustomerBeneficiaryComponent,
+    CustomerBeneficiaryListComponent
   ],
   imports: [
     BrowserModule,
