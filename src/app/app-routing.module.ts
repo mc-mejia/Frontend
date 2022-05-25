@@ -23,7 +23,7 @@ const routes: Routes = [
   //{ path: 'register', component: RegisterComponent },
  // {path:"**",redirectTo:"product" },
  //  {path:'', redirectTo:"product" ,pathMatch:"full"},
-  {path:'singh', component: UnapprovedBankListComponent}
+  {path:'unapprovedAccounts', component: UnapprovedBankListComponent}
 ];
 
 @NgModule({
