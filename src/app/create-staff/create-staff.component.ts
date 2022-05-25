@@ -2,42 +2,55 @@ import { Component, OnInit } from '@angular/core';
 import { StaffComponent } from '../staff/staff.component';
 import { StaffService } from '../staff/staff.service';
 import {Router} from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CreateStaffService } from './create-staff.service';
+import { Staff } from '../model/Staff';
 
 @Component({
   selector: 'app-create-staff',
-  templateUrl: './create-staff.component.html',
-  styleUrls: ['./create-staff.component.styl']
+  templateUrl: './create-staff.component.html'
 })
-export class CreateStaffComponent implements OnInit {
-
-    // staff : Staff=new Staff();
-    // submitted = false;
+export class CreateStaffComponent{
+    staff_name: string = "Name";
+    user_name: string = "UserName";
+    password: string ="password";
   
-    constructor(private staffService: StaffService,private router:Router) { }
+    registerServices:any[]
+   
+      staff:Staff=new Staff();
+      staffForm!:FormGroup;
+    submitted:boolean=false;
+    goto: void;
+    
   
-    ngOnInit() {
+    constructor(private _formBuilder:FormBuilder, 
+      private registerService:CreateStaffService, 
+      private router:Router){
+            
+      }
+  
+    ngOnInit():void{
+      this.staffForm=this._formBuilder.group(
+        {
+        staffName:[''],
+        userName:['',Validators.required],
+        password:['',Validators.required]
+  
+      })
     }
-    // newStaff(): void {
-    //   this.submitted = false;
-    //   this.staff = new Staff();
-    // }
   
-    // save() {
-    //   this.staffService.createStaff(this.staff)
-    //     .subscribe(data => console.log(data), error => console.log(error));
-    //   this.staff = new Staff();
-    //   this.gotoList();
-    // }
+    get f(){
+      return this.staffForm.controls;
+    }
+    onSubmit(){
+      this.registerService.save(this.staff).subscribe(result=>this.gotoStaffList());
+    }
   
-    // onSubmit() {
-    //   this.submitted = true;
-    //   this.save();
-    // }
-  
-    // gotoList(){
-    //   this.router.navigate(['/staffs']);
-    // }
-  
+    gotoStaffList(){
+      this.router.navigate(['/staff']);
+    }
   }
-  
+
+
+
 
