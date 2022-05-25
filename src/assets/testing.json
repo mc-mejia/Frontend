@@ -1,0 +1,26 @@
+[
+	{
+		"accountId": 1,
+		"accountName": "dipta",
+		"doc": "2021-06-05",
+		"accountType": "savings",
+		"balance": 10000,
+		"approve": false
+    },
+	{
+		"accountId": 2,
+		"accountName": "unnati",
+		"doc": "2022-06-05",
+		"accountType": "checkings",
+		"balance": 25400,
+		"approve": false
+	},
+	{
+		"accountId": 4,
+		"accountName": "maria",
+		"doc": "2020-08-02",
+		"accountType": "savings",
+		"balance": 42000,
+		"approve": false
+	} 
+]

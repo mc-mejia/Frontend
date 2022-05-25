@@ -1,0 +1,54 @@
+<p>unapproved-bank-list works!</p>
+
+<app-panel-box>
+  <span panel-title>Unapproved Bank Accounts</span>
+  <div panel-body>
+
+<!--    <input type="text" placeholder="Filter accounts" class="form-control" [(ngModel)]="filterAccounts"/>-->
+<!--    <div class="alert alert-success" *ngIf="filterAccounts">-->
+<!--      Filter by:  {{filterAccounts}}-->
+<!--    </div>-->
+    <table class="table table-bordered"> <!-- *ngIf="accounts && accounts.length">  -->
+      <thead>
+      <tr>
+        <!--        <th>-->
+        <!--          <button class="btn btn-primary" (click)="toggleImage()">-->
+        <!--            {{showHideImg ? "Hide image" : "Show Image"}}-->
+        <!--          </button>-->
+        <!--        </th>-->
+
+        <th>Account Number</th>
+        <th>Account Holder's Name</th>
+        <th>Date of creation</th>
+        <th>Account Type</th>
+        <th>Balance</th>
+        <th>Approve</th>
+      </tr>
+      </thead>
+      <tbody>
+
+
+
+      <tr *ngFor="let account of accounts" >
+        <td>
+          {{account.accountId}}
+        </td>
+        <!--        <td><img [src]="account.imageUrl" style="width:50px;" *ngIf="showHideImg"/></td>-->
+<!--        <td>-->
+
+<!--          <a [routerLink]="['/staff/accounts/approve']">-->
+<!--            &lt;!&ndash;            {{account.accountName}}&ndash;&gt;-->
+<!--          </a>-->
+<!--        </td>-->
+        <td>{{account.accountName}}</td>
+        <td>{{account.doc}}</td>
+        <td>{{account.accountType}}</td>
+        <td>{{account.balance}}</td>
+        <td> <button class="btn btn-primary"  (click)="approveButton($event); account.approve=true" >Approve</button></td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</app-panel-box>
+
