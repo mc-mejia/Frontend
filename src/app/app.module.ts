@@ -21,6 +21,7 @@ import {AuthService} from './auth/auth.service';
 import { NavbarComponent } from './misc/navbar/navbar.component';
 import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
+import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff.component';
 import { CustomerBankListComponent } from './customer-bank-list/customer-bank-list.component';
 
 @NgModule({
@@ -41,8 +42,8 @@ import { CustomerBankListComponent } from './customer-bank-list/customer-bank-li
     NavbarComponent,
     TemplateComponent,
     ReactiveComponent,
-    CustomerBankListComponent,
-    
+    BeneficiaryStaffComponent,
+    CustomerBankListComponent
   ],
   imports: [
     BrowserModule,

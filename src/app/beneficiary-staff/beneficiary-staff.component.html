@@ -1,0 +1,32 @@
+<!-- <app-panel-box> -->
+    <!-- <span panel-title>Newly Added Beneficiary</span> -->
+    <div *ngIf="approvalReply">{{approvalReply}}</div>
+    <div>
+             <table class="table table-bordered" *ngIf="beneficiaries && beneficiaries.length">
+                     <thead>
+                        <tr>
+                            <th>From Customer Name-CustomerId</th> 
+                            <th>Beneficiary Name-AcNo</th> 
+                            <th>Beneficiary Added Date</th>
+                            <th>Approve</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                <tr *ngFor="let beneficiary of beneficiaries; let i = index" [attr.data-index]="i">
+                    <td> 
+                        {{beneficiary.beneficiaryId}}
+                    </td>
+                    <td>THIS IS HARD DO THIS LATER! EITHER ADD NAME TO BENEFICIARY OR CREATE SERVICE METHOD THAT RETRIEVES IT WITH A BANK ACCOUNT NUMBER?</td>
+                    <td>
+                        {{beneficiary.dateOfCreation}}
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" (click)="approve(i)">
+                            Approve
+                        </button>
+                    </td>
+                 </tr>
+                </tbody>
+             </table>
+         </div>
+<!-- </app-panel-box> -->
