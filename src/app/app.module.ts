@@ -23,6 +23,7 @@ import { TemplateComponent } from './validation/template/template.component';
 import { ReactiveComponent } from './validation/reactive/reactive.component';
 import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff.component';
 import { CustomerBankListComponent } from './customer-bank-list/customer-bank-list.component';
+import { StaffAccountStatementComponent } from './staff-account-statement/staff-account-statement.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { CustomerBankListComponent } from './customer-bank-list/customer-bank-li
     TemplateComponent,
     ReactiveComponent,
     BeneficiaryStaffComponent,
-    CustomerBankListComponent
+    CustomerBankListComponent,
+    StaffAccountStatementComponent
   ],
   imports: [
     BrowserModule,

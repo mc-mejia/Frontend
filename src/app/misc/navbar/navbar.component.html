@@ -22,7 +22,7 @@
         <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==1">Transfer Money*</a></li>
         <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==1">View Statement*</a></li>
 
-        <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==2">Transfer</a></li>
+        <li><a [routerLink]="['staff/transfer']" *ngIf="userStatus==2">Transfer</a></li>
         <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==2">By Account Number</a></li>
         <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==2">Approve Beneficiary</a></li>
         <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==2">Approve Account</a></li>
@@ -43,8 +43,10 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==1">Logout</a></li>
         <li *ngIf="userStatus==1">Welcome, PUT USERNAME HERE</li>
+
         <li><a [routerLink]="['++++++++++']" *ngIf="userStatus==2">Logout</a></li>
         <li *ngIf="userStatus==2">Welcome: PUT USERNAME HERE</li>
+        
         <li *ngIf="userStatus==3">SUPER ADMIN</li>
       </ul>
     </div>

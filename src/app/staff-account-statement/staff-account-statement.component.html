@@ -1,0 +1,34 @@
+<div style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <!-- <div class="form-group">
+            <label for="name">studentId</label>
+            <input type="text" class="form-control" id="custNo" required [(ngModel)]="customer.studentId" name="custNo">
+        </div> -->
+    
+        <div class="form-group">
+            <label for="fromAccNo">From Account Number</label>
+            <input type="number" class="form-control" id="fromAccNo" required [(ngModel)]="transaction.senderId" name="fromAccNo">
+        </div>
+    
+        <div class="form-group">
+            <label for="toAccNo">To Account Number</label>
+            <input type="number" class="form-control" id="toAccNo" required [(ngModel)]="transaction.beneficiaryId" name="toAccNo">
+        </div>
+    
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <input type="number" class="form-control" id="amount" required [(ngModel)]="transaction.transactionAmount" name="amount">
+        </div>
+    
+        <div class="form-group">
+            <label for="remarks">Remarks</label>
+            <input type="text" class="form-control" id="remarks" required [(ngModel)]="transaction.reasonTransaction" name="remarks">
+        </div>
+    
+        <button type="submit" class="btn btn-success">Transfer</button>
+    </form>
+    </div>
+    
+    <div [hidden]="!submitted">
+        <h4>You transferred successfully!</h4>
+    </div>
