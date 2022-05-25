@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import {RegisterComponent} from './register/register.component';
 import { IndexComponent } from './index/index.component';
-import { ProductComponent } from './product/product.component';
-import { DetailsComponent } from './product/details/details.component';
 import { WelcomeComponent } from './misc/welcome/welcome.component';
 import {AuthGuard} from './auth/auth.guard';
 import {LoginComponent} from './auth/login/login.component';
@@ -16,8 +13,8 @@ import { StaffAccountStatementComponent } from './staff-account-statement/staff-
 import { StaffComponent } from './staff/staff.component';
 import { CreateStaffComponent } from './create-staff/create-staff.component';
 const routes: Routes = [
-  { path:'product', component: ProductComponent,canActivate:[AuthGuard] },
-  { path:'product/:pId', component:DetailsComponent,canActivate:[AuthGuard] },
+  // { path:'product', component: ProductComponent,canActivate:[AuthGuard] },
+  // { path:'product/:pId', component:DetailsComponent,canActivate:[AuthGuard] },
   { path:'template-form', component:TemplateComponent,canActivate:[AuthGuard] },
 
   { path:'staff', component:StaffComponent,canActivate:[AuthGuard] },
