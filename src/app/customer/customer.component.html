@@ -1,0 +1,32 @@
+<app-panel-box>
+  <span panel-title>Customer</span>
+  <div panel-body>
+    <table class="table table-bordered">
+      <thead>
+      <tr>
+        <th>Customer name</th>
+        <th>Customer ID</th>
+        <th> Enable Disable</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>
+          {{customer.customerName}}
+        </td>
+        <td>{{customer.accountId}}</td>
+        <td>
+          <mat-slide-toggle
+            [checked]="customer.approve"
+            let enable = {{customer.approve}}
+            (change)="onChange(customer)">{{customer.approve}}
+          </mat-slide-toggle>
+        </td>
+      </tr>
+      </tbody>
+
+    </table>
+  </div>
+</app-panel-box>
+

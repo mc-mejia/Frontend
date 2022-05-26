@@ -14,6 +14,8 @@ import { StaffComponent } from './staff/staff.component';
 import { CreateStaffComponent } from './create-staff/create-staff.component';
 import { BeneficiaryStaffComponent } from './beneficiary-staff/beneficiary-staff.component';
 import { CustomerBeneficiaryListComponent } from './customer-beneficiary-list/customer-beneficiary-list.component';
+import { CustomerComponent } from "./customer/customer.component";
+
 const routes: Routes = [
   // { path:'product', component: ProductComponent,canActivate:[AuthGuard] },
   // { path:'product/:pId', component:DetailsComponent,canActivate:[AuthGuard] },
@@ -30,13 +32,14 @@ const routes: Routes = [
   {path:'app-customer-beneficiary-list', component:CustomerBeneficiaryListComponent},
   {path:'admin/createStaff', component:CreateStaffComponent},
   { path:'admin/viewStaff', component:StaffComponent},
-  
+  { path:'staff/disableCustomer', component:CustomerComponent},
+
  //{ path: '', component: IndexComponent ,pathMatch:"full"},
  { path: 'welcome', component: WelcomeComponent ,canActivate:[AuthGuard]},
   //{ path: 'register', component: RegisterComponent },
 //  {path:"**",redirectTo:"product" },
-//   {path:'', redirectTo:"product" ,pathMatch:"full"},  
-  
+//   {path:'', redirectTo:"product" ,pathMatch:"full"},
+
   // {path:"**",redirectTo:'customer-bank-list'},
   // {path:'', redirectTo:'customer-bank-list',pathMatch:"full"},
   // {path:'',redirectTo:'customer/:customerId/account'},
