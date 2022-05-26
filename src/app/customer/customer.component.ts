@@ -10,7 +10,6 @@ import {Customer} from "../model/Customer";
 export class CustomerComponent implements OnInit {
   dataSubscription: any;
   customers:any=[];
-  Enable: string="";
 
   constructor(private _customerService: CustomerService) { }
 
@@ -21,10 +20,7 @@ export class CustomerComponent implements OnInit {
   }
 
   onChange(cust:Customer) {
-    if(cust.approve)
-      cust.approve=false;
-    else
-      cust.approve=true;
+    cust.approve = !cust.approve;
     this._customerService.update(cust);
   }
 }

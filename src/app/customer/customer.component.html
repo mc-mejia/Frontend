@@ -6,7 +6,7 @@
       <tr>
         <th>Customer name</th>
         <th>Customer ID</th>
-        <th> Enable Disable</th>
+        <th>Status</th>
       </tr>
       </thead>
 
@@ -17,10 +17,11 @@
         </td>
         <td>{{customer.accountId}}</td>
         <td>
+          <div *ngIf ="customer.approve">Enabled</div>
+          <div *ngIf ="!customer.approve">Disabled</div>
           <mat-slide-toggle
             [checked]="customer.approve"
-            let enable = {{customer.approve}}
-            (change)="onChange(customer)">{{customer.approve}}
+            (change)="onChange(customer)">
           </mat-slide-toggle>
         </td>
       </tr>
