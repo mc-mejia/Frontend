@@ -17,12 +17,12 @@
         </td>
         <td>{{customer.accountId}}</td>
         <td>
-          <div *ngIf ="customer.approve">Enabled</div>
-          <div *ngIf ="!customer.approve">Disabled</div>
           <mat-slide-toggle
             [checked]="customer.approve"
             (change)="onChange(customer)">
           </mat-slide-toggle>
+          <div *ngIf ="customer.approve">Enabled</div>
+          <div *ngIf ="!customer.approve">Disabled</div>
         </td>
       </tr>
       </tbody>
